@@ -1,0 +1,23 @@
+<%- include("header")%>
+<%- include("nav")%>
+<ol class="list-group list-group-numbered container mt-5">
+  <span class="fs-3 text-primary mb-2 mr-5"> Remaing Task</span>
+  <% if(tasks.length === 0){ %>
+   <h3 class="text-success text-center">No Remaining Task Available</h3> 
+   <% }%> 
+   <% tasks.forEach(function(task){ %>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold"> <%= task.title%></div>
+        <%= task.desc%><br><small class="mx-1 text-danger"><%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %></small>
+      </div>
+      <a href="/edit/<%= task.id%>">
+      <span class="fs-5 badge rounded-pill">✏</span>
+    </a>
+    <a href="/delete/<%= task.id%>">
+      <span class="fs-5 badge rounded-pill">❌</span>
+    </a>
+    </li>
+       <% })%>
+     </ol>
+ <%- include("footer")%>

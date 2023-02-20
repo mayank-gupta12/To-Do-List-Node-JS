@@ -1,0 +1,15 @@
+
+
+
+<%- include("header")%>
+
+
+<%- include("nav")%>
+<form  class="container w-50 mt-5 p-5 text-center" action="/add" method="post">
+    <h1 class="text-start"><span class="text-success ">Create Task</span></h1>
+    <input class="form-control mb-2 py-2 fs-5" type="text" placeholder="Title" name="title">
+    <input class="form-control mb-2 py-2 fs-5" type="text" placeholder="Description here" name="desc">
+    <button class=" w-100 btn btn-primary">Add Task</button>
+</form>
+
+<%- include("footer")%>
