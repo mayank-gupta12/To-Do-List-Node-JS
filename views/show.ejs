@@ -9,7 +9,7 @@
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto">
         <div class="fw-bold"> <%= task.title%></div>
-        <%= task.desc%><br><small class="mx-1 text-danger"> &nbsp; <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %></small>
+        <%= task.desc%><br><small class="mx-1 text-danger"> &nbsp; &nbsp; <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit'}).format(new Date()) %></small>
       </div>
       <a href="/edit/<%= task.id%>">
       <span class="fs-5 badge rounded-pill">✏</span>
